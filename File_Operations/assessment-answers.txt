@@ -1,0 +1,30 @@
+//1. Difference between sync and async file operations?
+ANS:-Synchronous operations block the event loop until completion, while asynchronous operations execute in the background and improve performance.
+
+//2. When to use streams
+ANS:-Streams should be used for large files to reduce memory usage and improve efficiency.
+
+//3. Purpose of utf8 encoding
+ANS:-It ensures correct reading and writing of text data in a standard character format.
+
+//4. Common fs error codes
+
+ANS:-ENOENT: File not found
+
+EACCES: Permission denied
+
+EISDIR: Expected file but found directory
+
+//5. Safely delete directory with contents
+ANS:-Use fs.rm(directory, { recursive: true, force: true }).
+
+6. Piping in streams
+ANS:-Piping transfers data from one stream to another.
+Example:
+readStream.pipe(writeStream);
+
+7. Importance of error handling
+It prevents crashes and ensures application stability.
+
+8. writeFile vs appendFile
+writeFile overwrites content, while appendFile adds content to the end.
