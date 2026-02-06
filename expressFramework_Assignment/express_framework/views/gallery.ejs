@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery</title>
+
+</head>
+<body>
+
+  <h1>Photo Gallery</h1>
+
+  <div class="gallery">
+    <% images.forEach(image => { %>
+      <img src="/<%= image %>" alt="Gallery Image">
+    <% }) %>
+  </div>
+
+</body>
+</html>
