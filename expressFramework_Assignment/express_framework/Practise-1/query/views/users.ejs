@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Filter</title>
+</head>
+<body>
+
+<h1>User List</h1>
+
+<form method="GET" action="/users">
+    <input type="text" name="name" placeholder="Search by name">
+    <button type="submit">Search</button>
+</form>
+
+<hr>
+
+<ul>
+    <% if (filteredUsers.length === 0) { %>
+        <li>No users found</li>
+    <% } else { %>
+        <% filteredUsers.forEach(user => { %>
+            <li><%= user.name %></li>
+        <% }) %>
+    <% } %>
+</ul>
+
+</body>
+</html>

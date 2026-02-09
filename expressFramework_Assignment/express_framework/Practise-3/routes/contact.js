@@ -1,18 +1,21 @@
 import express from "express";
+
 const router = express.Router();
 
-// GET → show form
-router.get("/", (req, res) => {
+// Show contact form
+router.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-// POST → handle form submission
-router.post("/", (req, res) => {
+// Handle form submission
+router.post("/contact", (req, res) => {
   const { name, email, message } = req.body;
 
-  console.log("Form Data:", req.body);
+  console.log("Form Submitted:");
+  console.log(name, email, message);
 
   res.render("thankyou", { name });
 });
 
 export default router;
+
