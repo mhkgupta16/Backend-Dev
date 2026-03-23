@@ -1,0 +1,38 @@
+Exercise 1: Database Selection
+
+Question: Choose the appropriate database type (SQL/NoSQL) and justify:
+
+1.  Online banking system Answer:
+
+-   Use SQL
+-   Needs high consistency (no wrong balance)
+-   Structured data like accounts and transactions
+-   Supports ACID properties
+
+2.  Social media platform Answer:
+
+-   Use NoSQL
+-   Handles large amount of data (posts, likes, comments)
+-   Flexible data structure
+-   Easy to scale
+
+3.  Real-time chat application Answer:
+
+-   Use NoSQL
+-   Requires fast and real-time messaging
+-   Data is semi-structured
+-   Supports quick scaling
+
+4.  Hospital patient records Answer:
+
+-   Use SQL
+-   Needs accurate and consistent data
+-   Structured records (patients, reports)
+-   Strong relationships between data
+
+5.  IoT sensor data collection Answer:
+
+-   Use NoSQL
+-   Continuous large data flow
+-   Unstructured/time-series data
+-   Fast data insertion required
