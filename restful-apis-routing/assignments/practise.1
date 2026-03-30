@@ -1,0 +1,15 @@
+app.get("/books", (req, res) => {
+  let result = books;
+
+  const { author, year } = req.query;
+
+  if (author) {
+    result = result.filter(b => b.author === author);
+  }
+
+  if (year) {
+    result = result.filter(b => b.year == year);
+  }
+
+  res.json(result);
+});
