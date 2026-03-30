@@ -1,0 +1,94 @@
+DATABASE PRACTICE EXERCISES – QUESTIONS & DETAILED ANSWERS
+
+  --------------------------------
+  Exercise 1: Database Selection
+  --------------------------------
+
+1.  Online Banking System Answer: SQL database is preferred. Reason:
+
+-   Requires strong consistency (ACID properties)
+-   Transactions must be accurate and reliable
+-   Structured data (accounts, transactions) Example: MySQL, PostgreSQL
+
+2.  Social Media Platform Answer: NoSQL database is preferred. Reason:
+
+-   Handles large unstructured data (posts, images)
+-   Needs horizontal scalability
+-   Flexible schema Example: MongoDB
+
+3.  Real-time Chat Application Answer: NoSQL database is preferred.
+    Reason:
+
+-   High speed and real-time data processing
+-   Handles large volume of messages
+-   Scalable Example: Firebase, MongoDB
+
+4.  Hospital Patient Records Answer: SQL database is preferred. Reason:
+
+-   Sensitive structured data
+-   Requires consistency and integrity
+-   Complex queries Example: PostgreSQL
+
+5.  IoT Sensor Data Collection Answer: NoSQL database is preferred.
+    Reason:
+
+-   Huge continuous data flow
+-   Schema flexibility
+-   High scalability Example: MongoDB, Cassandra
+
+  ----------------------------------
+  Exercise 2: CAP Theorem Analysis
+  ----------------------------------
+
+1.  Stock Trading Platform Answer: Consistency + Partition Tolerance
+    (CP) Reason:
+
+-   Accurate data is critical
+-   Cannot allow inconsistency
+
+2.  Content Delivery Network Answer: Availability + Partition Tolerance
+    (AP) Reason:
+
+-   Must always serve content
+-   Slight inconsistency acceptable
+
+3.  Airline Booking System Answer: Consistency + Availability (CA)
+    Reason:
+
+-   No double booking
+-   System must respond
+
+4.  Video Streaming Service Answer: Availability + Partition Tolerance
+    (AP) Reason:
+
+-   Continuous streaming required
+-   Minor inconsistency acceptable
+
+  --------------------------------
+  Exercise 3: MongoDB Operations
+  --------------------------------
+
+1.  Adding new books db.books.insertOne({ title: “Book A”, author:
+    “John”, available: true })
+
+2.  Finding books by author db.books.find({ author: “John” })
+
+3.  Updating book availability db.books.updateOne( { title: “Book A” },
+    { $set: { available: false } } )
+
+4.  Tracking borrowed books by user db.borrowed.insertOne({ user:
+    “Mahak”, book: “Book A”, date: new Date() })
+
+  --------------------------
+  Exercise 4: JSON to BSON
+  --------------------------
+
+Given JSON: { “orderId”: “12345”, “orderDate”: “2024-01-15”,
+“totalAmount”: “99.99”, “items”: [“item1”, “item2”] }
+
+Converted BSON: { orderId: NumberInt(12345), orderDate:
+ISODate(“2024-01-15T00:00:00Z”), totalAmount: NumberDecimal(“99.99”),
+items: [“item1”, “item2”] }
+
+Explanation: - orderId → Number (Integer) - orderDate → Date format
+(ISODate) - totalAmount → Decimal - items → Array (same)
