@@ -1,0 +1,39 @@
+Assessment Questions and Answers
+
+1.  What are the advantages of using Mongoose over the native MongoDB
+    driver?
+
+Answer: Mongoose provides a higher-level abstraction over MongoDB with
+schema-based modeling. It allows you to define schemas with validation,
+default values, and data types. It also supports middleware (hooks),
+easier query building, population (joins), and better structure for
+large applications compared to the native MongoDB driver.
+
+2.  Explain the difference between findOneAndUpdate() and updateOne().
+
+Answer: findOneAndUpdate() finds a single document and updates it,
+returning the updated (or original) document depending on options.
+updateOne() updates a single document but only returns the result status
+(acknowledgment), not the updated document.
+
+3.  What is the purpose of middleware in Mongoose?
+
+Answer: Middleware in Mongoose (also called hooks) are functions that
+run before or after certain operations like save, update, or delete.
+They are used for tasks like validation, logging, hashing passwords, or
+modifying data before saving.
+
+4.  How do you implement pagination in Mongoose?
+
+Answer: Pagination is implemented using skip() and limit() methods.
+Example: Model.find() .skip((page - 1) * limit) .limit(limit);
+
+This helps fetch a specific subset of data for each page.
+
+5.  When should you use embedding vs referencing in MongoDB schema
+    design?
+
+Answer: Embedding is used when data is closely related and frequently
+accessed together (e.g., user with addresses). Referencing is used when
+data is large, shared, or needs to be accessed independently (e.g.,
+users and posts in different collections).
